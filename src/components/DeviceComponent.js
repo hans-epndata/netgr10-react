@@ -19,13 +19,14 @@ const DeviceComponent = ({item}) => {
         <div className="card-body">
           <i className="m-3 fa-regular fa-microchip"></i>
           <h5 className="card-title">{item.DeviceId}</h5>
+          <h6 className="card-title">{item.LightState.toString()}</h6>
           <p className="card-text"></p>
         </div>
         <div className="card-footer">
           <small className="text-muted d-flex justify-content-between align-items-center">
-            <span className={`dot ${(item.ConnectionState) === 1 ? 'online' : ''}`}></span>
+            <span className={`dot ${(item.ConnectionState) === "Connected" ? 'online' : ''}`}></span>
             <div className="form-check form-switch">
-              <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={sendInvokeMethod} />
+              <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked={item.LightState} onClick={sendInvokeMethod} />
             </div>
           </small>
         </div>
