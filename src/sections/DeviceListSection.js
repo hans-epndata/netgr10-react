@@ -7,7 +7,7 @@ const DeviceListSection = () => {
 
     useEffect(() => {
         getDevicesAsync()
-    }, [])
+    }, [getDevicesAsync])
     
 
     return (
