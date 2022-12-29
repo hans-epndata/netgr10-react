@@ -1,0 +1,13 @@
+.fa-microchip {
+    font-size: 3.5rem;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: gainsboro;
+}
+
+.online {
+    background-color: green;
+}
